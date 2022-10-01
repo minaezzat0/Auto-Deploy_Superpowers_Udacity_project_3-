@@ -240,13 +240,8 @@ jobs:
     steps:
       # Checkout code from git
       - checkout
-      - attach_workspace:
-          at: ~/project
-      - restore_cache:
-          keys: [backend-build]
       - run:
           name: Run migrations
-          no_output_timeout: 7m
           command: |
             pwd
             ls
