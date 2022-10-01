@@ -40,7 +40,7 @@ commands:
     description: Revert the last migration if successfully run in the current workflow.
     parameters:
       Workflow_ID:
-        type: "string"
+        type: string
     steps:
       - run:
           name: Revert migrations
@@ -236,7 +236,7 @@ jobs:
 
   run-migrations:
     docker:
-      - image: circleci/node:13.8.0
+      - image: cimg/node:13.8.0
     steps:
       # Checkout code from git
       - checkout
