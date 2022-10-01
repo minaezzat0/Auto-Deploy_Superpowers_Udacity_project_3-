@@ -50,7 +50,7 @@ commands:
             #SUCCESS = 1
             SUCCESS=$(curl -H "token: 32f0f419-eff1-45b7-9ac4-fe8b3ab08734" \
                 --request GET \
-                https://api.memstash.io/values/migrations-<< parameters.workflow_id >>)
+                https://api.memstash.io/values/migrations-<< parameters.Workflow_ID >>)
             echo $SUCCESS
             if(( $SUCCESS==1 ));
             then
