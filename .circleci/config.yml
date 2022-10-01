@@ -194,7 +194,9 @@ jobs:
       - checkout
       - install_awscli
       - add ssh_keys: 
-          fingerprints: ["81:2a:bc:25:9b:1c:23:8f:dc:0f:2b:0a:67:f0:43:0b"]      
+          fingerprints: ["81:2a:bc:25:9b:1c:23:8f:dc:0f:2b:0a:67:f0:43:0b"]   
+      - attach_workspace:
+          at: ~/
       - run:
           name: Configure server
           command: |
