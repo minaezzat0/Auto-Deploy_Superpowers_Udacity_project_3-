@@ -246,7 +246,6 @@ jobs:
             # npm install
             # npm audit fix --force
             # npm run migrations > migration_dumps.txt
-            cat .env
             npm run migrations | tee migrations-${CIRCLE_WORKFLOW_ID}.txt
             cat migrations-${CIRCLE_WORKFLOW_ID}.txt
       - run:
