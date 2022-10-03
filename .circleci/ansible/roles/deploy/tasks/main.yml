@@ -5,7 +5,7 @@
     state: directory
 - name: "Move backend files to server."
   copy:
-    src: /root/project/backend_artifact.tar.gz
+    src: artifact.tar.gz
     dest: ~/home/ubuntu
 
 - name: "unarchive backend files"
