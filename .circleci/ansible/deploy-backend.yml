@@ -1,9 +1,12 @@
 ---
 
-- name: "configuration play." 
+- name: "deployment play." 
   hosts: web
   user: ubuntu
   gather_facts: false
+  becomes: true
+  become_methode: true
+  become_user: true
   vars:
     - ansible_python_interpreter: /usr/bin/python3
     - ansible_host_key_checking: false
