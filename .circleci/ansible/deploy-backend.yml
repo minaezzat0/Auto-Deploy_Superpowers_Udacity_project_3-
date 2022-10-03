@@ -4,7 +4,7 @@
   hosts: web
   user: ubuntu
   gather_facts: false
-  becomes: true
+  become: true
   become_methode: true
   become_user: true
   vars:
