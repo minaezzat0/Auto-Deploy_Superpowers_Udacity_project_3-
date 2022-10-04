@@ -325,19 +325,12 @@ jobs:
             cd backend 
             npm install
       - run:
-          name: Deploy backend
-          no_output_timeout: 30m
-          command: |
-            pwd            
-            tar -C backend -czvf backend_artifact.tar.gz .
-            cd .circleci/ansible
-      - run:
           name: Package backend
           command: |
             cd backend
             npm run build
-            tar -czf artifact.tar.gz dist/* package*  
-            
+            tar -czf artifact.tar.gz dist/* package*    
+            #tar -C backend -czvf artifact.tar.gz .
             cd ..
             cp backend/artifact.tar.gz .circleci/ansible/roles/deploy/files
       - run:
