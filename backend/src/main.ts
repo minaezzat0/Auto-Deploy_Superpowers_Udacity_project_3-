@@ -34,6 +34,7 @@ async function bootstrap() {
   SwaggerModule.setup(`api/${apiVersionPrefix}`, app, document);
   const config: ConfigService = app.get('ConfigService');
   const whitelist = config.CORS_WHITELIST;
+
   const corsOptions = {
     origin(origin, callback) {
       const isOriginAllowed = whitelist.indexOf(origin) !== -1;
@@ -52,3 +53,4 @@ async function bootstrap() {
 }
 
 bootstrap();
+ 
