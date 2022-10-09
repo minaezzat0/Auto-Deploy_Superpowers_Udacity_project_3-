@@ -39,7 +39,7 @@ export class Table extends Component<Table.Props, Table.State> {
   }
 
   tableClasses() {
-    console.log('new branch');
+    console.log('new branch ssss');
     return classNames({
       [style.ReactTable]: true,
       'table-large': true,
