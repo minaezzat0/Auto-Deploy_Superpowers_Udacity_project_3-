@@ -266,7 +266,7 @@ jobs:
               --output text)
             echo ENVIRONMENT=development >> frontend/.env
             echo NODE_ENV=production >> frontend/.env
-            echo "API_URL=http://${BACKEND_PUBLIC_IP}:3030" >> frontend/.env
+            echo "API_URL=https://${BACKEND_PUBLIC_IP}:3030" >> frontend/.env
             cat frontend/.env
       - run:
           name: deploy frontend
